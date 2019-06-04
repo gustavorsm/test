@@ -36,7 +36,7 @@
             </h2>
             </div>
             <div class="pull-right">
-            <button type="button" title="Add Parameter" class="btn btn-default" (click)="agregarAnalisis()" style="margin-right: 8px;">
+            <button type="button" title="Add Parameter" class="btn btn-default" (click)="anadirAnalisis()" style="margin-right: 8px;">
                 <span class="fas fa-plus"></span>
             </button>
             </div>
@@ -62,10 +62,10 @@
                     <td>{{analisis.descripcion}}</td>
                     <td>{{analisis.fecha | date:'dd/MM/yyyy'}}</td>
                     <td>
-                        <button class="btn btn-default" title="Editar Analisis" (click)="editarAnalisis(analisis)">
+                        <button class="btn btn-default" title="Modificar Analisis" (click)="modificarAnalisis(analisis)">
                           <span class="fas fa-edit"></span>
                         </button>
-                        <button class="btn btn-danger" title="Borrar Analisis" (click)="borrarAnalisis(analisis);">
+                        <button class="btn btn-danger" title="Borrar Analisis" (click)="eliminarAnalisis(analisis);">
                             <span class="fas fa-trash-alt"></span>
                           </button>
                       </td>

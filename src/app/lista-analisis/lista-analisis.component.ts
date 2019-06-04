@@ -11,15 +11,6 @@ export class ListaDeAnalisisComponent implements OnInit {
 
   private listaDeAnalisis: any=[];
 
-  private income:any={}
-  private expenses: any=[];
-  private incomes: any=[];
-  private balance: any={};
-  private totalIncomes: any;
-  private totalExpenses: any;
-  private totalServices:number;
-  private totalFood:number;
-  private totalOthers:number;
   constructor(private router: Router,private conexionService: ConexionService) { }
 
   ngOnInit() {
@@ -60,20 +51,20 @@ export class ListaDeAnalisisComponent implements OnInit {
     return parseInt(anio+mes+dia);
   }
 
-  agregarAnalisis(){
-    this.router.navigateByUrl('/registrarAnalisis');
+  anadirAnalisis(){
+    this.router.navigateByUrl('/anadirAnalisis');
   }
 
   back() {
     this.router.navigateByUrl('/historial');
   }
-  borrarAnalisis(analisis){
+  eliminarAnalisis(analisis){
     this.conexionService.eliminarAnalisis(analisis);
     this.ngOnInit();
   }
 
-  editarAnalisis(analisis:any){
-    this.router.navigate(['/editarAnalisis', analisis.iden])
+  modificarAnalisis(analisis:any){
+    this.router.navigate(['/modificarAnalisis', analisis.iden])
   }
   RedirectTo(value:any){
     switch(value){

@@ -104,23 +104,23 @@ export class ConexionService {
   anadirTratamiento(tratamiento : Tratamiento){
     this.tratamientosColecction.add(tratamiento);
   }
-  editarAnalisis(analisis){
+  modificarAnalisis(analisis){
     this.analisisDoc = this.afs.doc<Analisis>(`ListaDeAnalisis/${analisis.id}`);
     this.analisisDoc.update(analisis);
   }
-  editarUsuarios(usuario){
+  modificarPerfil(usuario){
     this.usuariosDoc = this.afs.doc<Usuario>(`ListaDeUsuarios/${usuario.id}`);
     this.usuariosDoc.update(usuario);
   }
-  editarConsulta(consulta){
+  modificarConsulta(consulta){
     this.consultasDoc= this.afs.doc<Consulta>(`ListaDeConsultas/${consulta.id}`);
     this.consultasDoc.update(consulta);
   }
-  editarTratamiento(tratamiento){
+  modificarTratamiento(tratamiento){
     this.tratamientosDoc = this.afs.doc<Tratamiento>(`ListaDeTratamientos/${tratamiento.id}`);
     this.tratamientosDoc.update(tratamiento);
   }
-  editarDiagnostico(diagnostico){
+  modificarDiagnostico(diagnostico){
     this.diagnosticosDoc = this.afs.doc<Diagnostico>(`ListaDeDiagnosticos/${diagnostico.id}`);
     this.diagnosticosDoc.update(diagnostico);
   }

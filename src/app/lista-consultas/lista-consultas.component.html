@@ -36,7 +36,7 @@
                 </h2>
                 </div>
                 <div class="pull-right">
-                    <button type="button" title="Add Parameter" class="btn btn-default" (click)="agregarConsulta()" style="margin-right: 8px;">
+                    <button type="button" title="Add Parameter" class="btn btn-default" (click)="anadirConsulta()" style="margin-right: 8px;">
                         <span class="fas fa-plus"></span>
                     </button>
                 </div>
@@ -62,10 +62,10 @@
                     <td>{{consulta.descripcion}}</td>
                     <td>{{consulta.fecha | date:'dd/MM/yyyy'}}</td>
                     <td>
-                        <button class="btn btn-default" title="Editar Consulta" (click)="editarConsulta(consulta)">
+                        <button class="btn btn-default" title="Modificar Consulta" (click)="modificarConsulta(consulta)">
                           <span class="fas fa-edit"></span>
                         </button>
-                        <button class="btn btn-danger" title="Borrar Consulta" (click)="borrarConsulta(consulta);">
+                        <button class="btn btn-danger" title="Borrar Consulta" (click)="eliminarConsulta(consulta);">
                             <span class="fas fa-trash-alt"></span>
                           </button>
                       </td>

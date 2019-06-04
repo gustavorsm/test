@@ -11,15 +11,7 @@ export class ListaDeConsultasComponent implements OnInit {
 
   private listaDeConsultas: any=[];
 
-  private income:any={}
-  private expenses: any=[];
-  private incomes: any=[];
-  private balance: any={};
-  private totalIncomes: any;
-  private totalExpenses: any;
-  private totalServices:number;
-  private totalFood:number;
-  private totalOthers:number;
+
   constructor(private router: Router,private conexionService: ConexionService) { }
 
   ngOnInit() {
@@ -29,22 +21,23 @@ export class ListaDeConsultasComponent implements OnInit {
       consulta.forEach((element:any) => {
         if(element.auth == usuarioLogeado.auth) this.listaDeConsultas.push(element);
       });
-      this.verificarOrden(this.verificarOrden);
+      this.verificarOrden(this.listaDeConsultas);
     });
   }
   
 
-  verificarOrden(consultas:any){
+  verificarOrden(historial:any){
     let aux;
-    for(let i=0;i<consultas.length-1;i++){
-      for(let j=i+1;j<consultas.length;j++){
-        if(this.parsearFecha(consultas[i].fecha)<this.parsearFecha(consultas[j].fecha)){
-          aux=consultas[i];
-          consultas[i]=consultas[j];
-          consultas[j]=aux;
+    for(let i=0;i<historial.length-1;i++){
+      for(let j=i+1;j<historial.length;j++){
+        if(this.parsearFecha(historial[i].fecha)<this.parsearFecha(historial[j].fecha)){
+          aux=historial[i];
+          historial[i]=historial[j];
+          historial[j]=aux;
         }
       } 
     }
+    console.log("Dddd",)
   }
 
   parsearFecha(fecha:any){
@@ -61,15 +54,15 @@ export class ListaDeConsultasComponent implements OnInit {
     return parseInt(anio+mes+dia);
   }
 
-  agregarConsulta(){
-    this.router.navigateByUrl('/registrarConsulta');
+  anadirConsulta(){
+    this.router.navigateByUrl('/anadirConsulta');
   }
 
-  editarConsulta(consulta:any){
-    this.router.navigate(['/editarConsulta', consulta.iden])
+  modificarConsulta(consulta:any){
+    this.router.navigate(['/modificarConsulta', consulta.iden])
   }
 
-  borrarConsulta(consulta){
+  eliminarConsulta(consulta){
     this.conexionService.eliminarConsulta(consulta);
   }
 

@@ -63,8 +63,8 @@
           </form>
           <br>
             <div class="pull-right">
-              <button *ngIf="!isEdit" (click)="isEdit = true; isDisabled = false" class="btn btn-default blue">Editar</button>
-              <button *ngIf="isEdit" [disabled]="!edited" (click)="editarUsuario()" class="btn btn-default blue">Guardar</button>
+              <button *ngIf="!isEdit" (click)="isEdit = true; isDisabled = false" class="btn btn-default blue">Modificar</button>
+              <button *ngIf="isEdit" [disabled]="!edited" (click)="modificarPerfil()" class="btn btn-default blue">Guardar</button>
             </div>
     </div>
     

@@ -28,8 +28,8 @@ export class MostrarUsuarioComponent implements OnInit {
       });
     });
   }
-  editarUsuario(){
-    this.conexionService.editarUsuarios(this.usuario);
+  modificarPerfil(){
+    this.conexionService.modificarPerfil(this.usuario);
     let usuarioLogeado = {
       auth : this.usuario.auth,
       nombre : this.usuario.nombre

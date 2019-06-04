@@ -8,10 +8,10 @@ import { ListaDeAnalisisComponent } from './lista-analisis/lista-analisis.compon
 import { ListaDeDiagnosticosComponent } from './lista-diagnosticos/lista-diagnosticos.component';
 import { ListaDeTratamientosComponent } from './lista-tratamientos/lista-tratamientos.component';
 import { HistorialComponent } from './historial/historial.component';
-import { RegistrarAnalisisComponent } from './registrar-analisis/registrar-analisis.component';
-import { RegistrarConsultaComponent } from './registrar-consulta/registrar-consulta.component';
-import { RegistrarDiagnosticoComponent } from './registrar-diagnostico/registrar-diagnostico.component';
-import { RegistrarTratamientoComponent } from './registrar-tratamiento/registrar-tratamiento.component';
+import { AnadirAnalisisComponent } from './anadir-analisis/anadir-analisis.component';
+import { AnadirConsultaComponent } from './anadir-consulta/anadir-consulta.component';
+import { AnadirDiagnosticoComponent } from './anadir-diagnostico/anadir-diagnostico.component';
+import { AnadirTratamientoComponent } from './anadir-tratamiento/anadir-tratamiento.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -22,10 +22,10 @@ import { LoginComponent } from './login/login.component';
 import { AuthAccountGuard } from './guards/authAccount.guard';
 import { AuthUserGuard } from './guards/authUser.guard';
 
-import { EditarAnalisisComponent } from './editar-analisis/editar-analisis.component';
-import { EditarConsultaComponent } from './editar-consulta/editar-consulta.component';
-import { EditarTratamientoComponent } from './editar-tratamiento/editar-tratamiento.component';
-import { EditarDiagnosticoComponent } from './editar-diagnostico/editar-diagnostico.component';
+import { ModificarAnalisisComponent } from './modificar-analisis/modificar-analisis.component';
+import { ModificarConsultaComponent } from './modificar-consulta/modificar-consulta.component';
+import { ModificarTratamientoComponent } from './modificar-tratamiento/modificar-tratamiento.component';
+import { ModificarDiagnosticoComponent } from './modificar-diagnostico/modificar-diagnostico.component';
 import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
 import { MostrarUsuarioComponent } from './ver-usuario/ver-usuario.component';
 
@@ -36,15 +36,15 @@ import { MostrarUsuarioComponent } from './ver-usuario/ver-usuario.component';
     ListaDeAnalisisComponent,
     ListaDeDiagnosticosComponent,
     ListaDeTratamientosComponent,
-    EditarAnalisisComponent,
-    EditarConsultaComponent,
-    EditarTratamientoComponent,
-    EditarDiagnosticoComponent,
+    ModificarAnalisisComponent,
+    ModificarConsultaComponent,
+    ModificarTratamientoComponent,
+    ModificarDiagnosticoComponent,
     HistorialComponent,
-    RegistrarAnalisisComponent,
-    RegistrarConsultaComponent,
-    RegistrarDiagnosticoComponent,
-    RegistrarTratamientoComponent,
+    AnadirAnalisisComponent,
+    AnadirConsultaComponent,
+    AnadirDiagnosticoComponent,
+    AnadirTratamientoComponent,
     RegistrarUsuarioComponent,
     LoginComponent,
     MostrarUsuarioComponent

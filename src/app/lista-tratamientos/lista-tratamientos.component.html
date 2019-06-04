@@ -36,7 +36,7 @@
             </h2>
             </div>
             <div class="pull-right">
-            <button type="button" title="Add Parameter" class="btn btn-default" (click)="agregarTratamiento()" style="margin-right: 8px;">
+            <button type="button" title="Add Parameter" class="btn btn-default" (click)="anadirTratamiento()" style="margin-right: 8px;">
                 <span class="fas fa-plus"></span>
             </button>
             </div>
@@ -62,10 +62,10 @@
                     <td>{{tratamiento.descripcion}}</td>
                     <td>{{tratamiento.fecha | date:'dd/MM/yyyy'}}</td>
                     <td>
-                        <button class="btn btn-default" title="Editar Tratamiento" (click)="editarTratamiento(tratamiento)">
+                        <button class="btn btn-default" title="Modificar Tratamiento" (click)="modificarTratamiento(tratamiento)">
                           <span class="fas fa-edit"></span>
                         </button>
-                        <button class="btn btn-danger" title="Borrar Tratamiento" (click)="borrarTratamiento(tratamiento);">
+                        <button class="btn btn-danger" title="Borrar Tratamiento" (click)="eliminarTratamiento(tratamiento);">
                             <span class="fas fa-trash-alt"></span>
                           </button>
                       </td>

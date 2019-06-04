@@ -52,11 +52,11 @@ export class ListaDeDiagnosticosComponent implements OnInit {
     return parseInt(anio+mes+dia);
   }
 
-  agregarDiagnostico(){
-    this.router.navigateByUrl('/registrarDiagnostico');
+  anadirDiagnostico(){
+    this.router.navigateByUrl('/anadirDiagnostico');
   }
-  editarDiagnostico(diagnostico:any){
-    this.router.navigate(['/editarDiagnostico', diagnostico.iden])
+  modificarDiagnostico(diagnostico:any){
+    this.router.navigate(['/modificarDiagnostico', diagnostico.iden])
   }
   eliminarDiagnostico(diagnostico){
     this.conexionService.eliminarDiagnostico(diagnostico);

@@ -5,14 +5,14 @@ import { ListaDeConsultasComponent } from './lista-consultas/lista-consultas.com
 import { ListaDeDiagnosticosComponent } from './lista-diagnosticos/lista-diagnosticos.component';
 import { ListaDeTratamientosComponent } from './lista-tratamientos/lista-tratamientos.component';
 import { HistorialComponent } from './historial/historial.component';
-import { RegistrarAnalisisComponent } from './registrar-analisis/registrar-analisis.component';
-import { RegistrarConsultaComponent } from './registrar-consulta/registrar-consulta.component';
-import { RegistrarDiagnosticoComponent } from './registrar-diagnostico/registrar-diagnostico.component';
-import { RegistrarTratamientoComponent } from './registrar-tratamiento/registrar-tratamiento.component';
-import { EditarAnalisisComponent } from './editar-analisis/editar-analisis.component';
-import { EditarConsultaComponent } from './editar-consulta/editar-consulta.component';
-import { EditarTratamientoComponent } from './editar-tratamiento/editar-tratamiento.component';
-import { EditarDiagnosticoComponent } from './editar-diagnostico/editar-diagnostico.component';
+import { AnadirAnalisisComponent } from './anadir-analisis/anadir-analisis.component';
+import { AnadirConsultaComponent } from './anadir-consulta/anadir-consulta.component';
+import { AnadirDiagnosticoComponent } from './anadir-diagnostico/anadir-diagnostico.component';
+import { AnadirTratamientoComponent } from './anadir-tratamiento/anadir-tratamiento.component';
+import { ModificarAnalisisComponent } from './modificar-analisis/modificar-analisis.component';
+import { ModificarConsultaComponent } from './modificar-consulta/modificar-consulta.component';
+import { ModificarTratamientoComponent } from './modificar-tratamiento/modificar-tratamiento.component';
+import { ModificarDiagnosticoComponent } from './modificar-diagnostico/modificar-diagnostico.component';
 import { LoginComponent } from './login/login.component';
 import { AuthAccountGuard } from './guards/authAccount.guard';
 import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
@@ -26,15 +26,15 @@ const routes: Routes = [
   { path: 'listaDeDiagnosticos', component: ListaDeDiagnosticosComponent },
   { path: 'listaDeTratamientos', component: ListaDeTratamientosComponent },
   { path: 'registrarUsuario', component: RegistrarUsuarioComponent },
-  { path: 'registrarAnalisis', component: RegistrarAnalisisComponent },
-  { path: 'registrarConsulta', component: RegistrarConsultaComponent },
-  { path: 'registrarDiagnostico', component: RegistrarDiagnosticoComponent },
-  { path: 'registrarTratamiento', component: RegistrarTratamientoComponent },
+  { path: 'anadirAnalisis', component: AnadirAnalisisComponent },
+  { path: 'anadirConsulta', component: AnadirConsultaComponent },
+  { path: 'anadirDiagnostico', component: AnadirDiagnosticoComponent },
+  { path: 'anadirTratamiento', component: AnadirTratamientoComponent },
   { path: 'verUsuario', component: MostrarUsuarioComponent },
-  { path: 'editarAnalisis/:iden', component: EditarAnalisisComponent },
-  { path: 'editarConsulta/:iden', component: EditarConsultaComponent },
-  { path: 'editarTratamiento/:iden', component: EditarTratamientoComponent },
-  { path: 'editarDiagnostico/:iden', component: EditarDiagnosticoComponent },
+  { path: 'modificarAnalisis/:iden', component: ModificarAnalisisComponent },
+  { path: 'modificarConsulta/:iden', component: ModificarConsultaComponent },
+  { path: 'modificarTratamiento/:iden', component: ModificarTratamientoComponent },
+  { path: 'modificarDiagnostico/:iden', component: ModificarDiagnosticoComponent },
   { path: 'historial', component: HistorialComponent, canActivate: [AuthAccountGuard] },
   //{ path: 'viewUser/:id', component: UserDetailsComponent },
 ];

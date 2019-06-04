@@ -24,7 +24,6 @@ export class ListaDeTratamientosComponent implements OnInit {
     });
   }
   
-
   verificarOrden(historial:any){
     let aux;
     for(let i=0;i<historial.length-1;i++){
@@ -51,14 +50,14 @@ export class ListaDeTratamientosComponent implements OnInit {
     anio = fecha.substring(fecha.lastIndexOf("/")+1,fecha.length);
     return parseInt(anio+mes+dia);
   }
-  agregarTratamiento(){
-    this.router.navigateByUrl('/registrarTratamiento');
+  anadirTratamiento(){
+    this.router.navigateByUrl('/anadirTratamiento');
   }
 
-  editarTratamiento(tratamiento:any){
-    this.router.navigate(['/editarTratamiento', tratamiento.iden])
+  modificarTratamiento(tratamiento:any){
+    this.router.navigate(['/modificarTratamiento', tratamiento.iden])
   }
-  borrarTratamiento(tratamiento){
+  eliminarTratamiento(tratamiento){
     this.conexionService.eliminarTratamiento(tratamiento);
   }
   RedirectTo(value:any){

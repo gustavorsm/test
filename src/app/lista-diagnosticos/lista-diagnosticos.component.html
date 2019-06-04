@@ -36,7 +36,7 @@
             </h2>
             </div>
             <div class="pull-right">
-            <button type="button" title="Add Parameter" class="btn btn-default" (click)="agregarDiagnostico()" style="margin-right: 8px;">
+            <button type="button" title="Add Parameter" class="btn btn-default" (click)="anadirDiagnostico()" style="margin-right: 8px;">
                 <span class="fas fa-plus"></span>
             </button>
             </div>
@@ -64,7 +64,7 @@
                     <td>{{diagnostico.descripcion}}</td>
                     <td>{{diagnostico.fecha | date:'dd/MM/yyyy'}}</td>
                     <td>
-                        <button class="btn btn-default" title="Editar Diagnostico" (click)="editarDiagnostico(diagnostico)">
+                        <button class="btn btn-default" title="Modificar Diagnostico" (click)="modificarDiagnostico(diagnostico)">
                           <span class="fas fa-edit"></span>
                         </button>
                         <button class="btn btn-danger" title="Borrar Diagnostico" (click)="eliminarDiagnostico(diagnostico);">
