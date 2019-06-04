@@ -1,0 +1,59 @@
+<div class="btn-group" style="width: 100%;">
+    <button class="btn btn-default" style="width: 5%;" title="User" (click)="RedirectTo('usuario')">
+        <span class="fas fa-user"></span>
+    </button>
+    <button class="btn btn-warning" style="width: 15%;" (click)="RedirectTo('historial')">
+      Historial
+    </button>
+    <button class="btn btn-warning" style="width: 20%;" (click)="RedirectTo('listaDeAnalisis')">
+      Lista De Analisis
+    </button>
+    <button class="btn btn-warning" style="width: 20%;" (click)="RedirectTo('listaDeConsultas')">
+      Lista De Consultas
+    </button>
+    <button class="btn btn-warning" style="width: 20%;" (click)="RedirectTo('listaDeDiagnosticos')">
+      Lista De Diagnosticos
+    </button>
+    <button class="btn btn-warning" style="width: 20%;" (click)="RedirectTo('listaDeTratamientos')">
+      Lista De Tratamientos
+    </button>
+    <button class="btn btn-success" style="width:7%;background-color:#248BB8" (click)=logout()>Logout</button>
+  </div>
+  <br>
+  <br/>
+
+  <div class="container">
+    <div class="table-wrapper">
+      <div class="table-title">
+          <div class="row">
+        <div class="row">
+          <div class="col-sm-6">
+            <h2>Historial
+            </h2>
+          </div>
+        </div>
+      </div>
+  
+      <br/>
+      <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Descripcion</th>
+              <th scope="col">Tipo</th>
+              <th scope="col">Doctor</th>
+              <th scope="col">Fecha</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let item of historial; let i = index">
+                  <td>{{i+1}}</td>
+                  <td>{{item.descripcion}}</td>
+                  <td>{{item.tipo}}</td>
+                  <td>{{item.doctor}}</td>
+                  <td>{{item.fecha | date:'dd/MM/yyyy'}}</td>
+                </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
