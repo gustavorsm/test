@@ -16,14 +16,14 @@ export class ModificarTratamientoComponent implements OnInit {
   constructor(private route: ActivatedRoute,private conexionService: ConexionService,private router: Router) { }
 
   ngOnInit() {
-    this.inizializarAnalisis();
+    this.inicializar();
     let found = this.route.params.subscribe(params => {
       let auth = +params['iden'];
       this.tratamientoId=auth;
    });
    this.edited=false;
   }
-  inizializarAnalisis(){
+  inicializar(){
     this.conexionService.listaDeTratamientos().subscribe(tratamiento=>{
       this.listaDeTratamientos = tratamiento;
       this.searchExpense();

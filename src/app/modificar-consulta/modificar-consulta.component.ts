@@ -16,14 +16,14 @@ export class ModificarConsultaComponent implements OnInit {
   constructor(private route: ActivatedRoute,private conexionService: ConexionService,private router: Router) { }
 
   ngOnInit() {
-    this.inizializarConsulta();
+    this.inicializar();
     let found = this.route.params.subscribe(params => {
       let auth = +params['iden'];
       this.consultaId=auth;
    });
    this.edited=false;
   }
-  inizializarConsulta(){
+  inicializar(){
     this.conexionService.listaDeConsultas().subscribe(consulta=>{
       this.listaDeConsultas = consulta;
       this.searchExpense();

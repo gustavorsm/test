@@ -16,14 +16,14 @@ export class ModificarAnalisisComponent implements OnInit {
   constructor(private route: ActivatedRoute,private conexionService: ConexionService,private router: Router) { }
 
   ngOnInit() {
-    this.inizializarAnalisis();
+    this.inicializar();
     let found = this.route.params.subscribe(params => {
       let auth = +params['iden'];
       this.analisisId=auth;
    });
    this.edited=false;
   }
-  inizializarAnalisis(){
+  inicializar(){
     this.conexionService.listaDeAnalisis().subscribe(analisis=>{
       this.listaDeAnalisis = analisis;
       this.searchExpense();

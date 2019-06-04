@@ -37,7 +37,6 @@ export class ListaDeConsultasComponent implements OnInit {
         }
       } 
     }
-    console.log("Dddd",)
   }
 
   parsearFecha(fecha:any){

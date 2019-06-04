@@ -8,7 +8,6 @@ export class AuthAccountGuard implements CanActivate {
 
     canActivate() {
         if (localStorage.getItem('UserLogged')) {
-            console.log("this")
             return true;
         }
         this.router.navigateByUrl('/login');

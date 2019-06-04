@@ -16,14 +16,14 @@ export class ModificarDiagnosticoComponent implements OnInit {
   constructor(private route: ActivatedRoute,private conexionService: ConexionService,private router: Router) { }
 
   ngOnInit() {
-    this.inizializarAnalisis();
+    this.inicializar();
     let found = this.route.params.subscribe(params => {
       let auth = +params['iden'];
       this.diagnosticoId=auth;
    });
    this.edited=false;
   }
-  inizializarAnalisis(){
+  inicializar(){
     this.conexionService.listaDeDiagnosticos().subscribe(diagnostico=>{
       this.listaDeDiagnosticos = diagnostico;
       this.searchExpense();

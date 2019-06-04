@@ -17,7 +17,6 @@ export class LoginComponent implements OnInit {
   constructor(private route: ActivatedRoute,private conexionService: ConexionService,private router: Router) { }
 
   ngOnInit() {
-    console.log("iniciar")
     this.usuario={};
     this.initializeAccounts();
   }
@@ -36,7 +35,6 @@ export class LoginComponent implements OnInit {
     this.conexionService.listaDeUsuarios().subscribe(usuario=>{
       let usuarioLogeado = {};
       this.listaDeUsuarios = usuario;
-      console.log("this333",this.usuario);
       for(let i = 0 ; i < this.listaDeUsuarios.length ; i++){
         if(this.listaDeUsuarios[i].nombre == this.usuario.nombre && this.listaDeUsuarios[i].contrasena == this.usuario.contrasena){
           usuarioLogeado = {
